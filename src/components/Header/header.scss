@@ -1,0 +1,152 @@
+@import '../../style/mixin.scss';
+
+body{
+    ul,
+    a {
+        list-style: none;
+        text-decoration: none;
+    }
+}
+.header{
+    .header_content{
+        .top_header{
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0px;
+           
+            .left-icons{
+                display: flex;
+                align-items: center;
+                
+                i{
+                    padding: 3px;
+                }
+                .call{
+                    @include maxResponsive(425px){
+                        display: none;
+                    }
+                    margin-left: 10px;
+                    
+                    p{
+                        font-size: 12px;
+                        padding: 0%;
+                        margin: 0%;
+                    }
+                }
+            }
+            select{
+                border: 1px black;
+                outline: none;
+            }
+
+
+        }
+        .border{
+            border-bottom: 1px solid #555555;
+        }
+        .middle_header{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 0px;
+            .burger_menu{
+                font-size: 30px;
+                @include minResponsive(1024px){
+                    display: none;
+                    
+                }
+            }
+
+            .left-logo{
+                @include maxResponsive(1024px){
+                    display: flex;
+                    justify-content: center;
+                }
+                img{
+                    width: 50%;    
+                }
+            }
+            .navigation{
+                @include maxResponsive(1024px){
+                    display: none;
+                }
+                .menu{
+                    padding: 0%;
+                    margin: 0%;
+                    display: flex;
+                    column-gap: 2.7rem;
+                    margin-bottom: 0;
+                    li{
+                        align-items: center;
+                        display: flex;
+                        list-style: none;
+                        a{
+                            text-decoration: none;
+                            color: #555555;
+                            font-weight: 600;
+                            &:hover{
+                                color: #83B828;
+                                
+                            }
+                        }
+                       
+
+                    }
+                }
+            }
+            .nav_icons{
+                i{
+                    height: 30px;
+                    width: 30px;
+                    display: inline-block;
+                    line-height: 30px;
+                    cursor: pointer;
+                    
+                }
+                .fav_icon{
+                    position: relative;
+                    @include maxResponsive(374px){
+                        display: none;
+                    }
+                    .badge {
+                        position: absolute;
+                        top: -0.5em;
+                        right: 10px;
+                        width: 13px;
+                        height: 13px;
+                        content: '';
+                        background: #83B828;
+                        color: #fff;
+                        border-radius: 50px;
+                        font-size: .8rem;
+                        font-weight: 600;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        z-index: 10;
+                    }
+                }
+                .user_icon, 
+                .search_icon{
+                    @include maxResponsive(767px){
+                        display: none;
+                    }
+                }
+            }
+            
+
+        }
+    }
+}
+
+// @media(min-width:1024px){
+//     .header{
+//         .header_content{
+//             .middle_header{
+//                 .burger_menu{
+//                     display: none;
+//                 }
+//             }
+//         }
+//     }
+// }

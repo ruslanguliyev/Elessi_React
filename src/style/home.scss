@@ -1,0 +1,57 @@
+.promo_banner{
+   .narrowest_bike{
+    .na_txt{
+        position: absolute;
+        top: 0;
+        right: 10%;
+        h2{
+            color: #83B828;     
+        }
+        p{
+            color: #AAAAAA;
+            font-size: 20px;
+            font-weight: 600;
+            float: right;
+            margin-top: -18px;
+        }
+    }
+   }
+   .mix_box{
+    .composants{
+        margin-bottom: 7px;
+        .co_txt{
+            position:absolute;
+            top: 0;
+            left: 10%;
+            p{
+                margin-top: -18px;
+                color: #AAAAAA;
+            font-size: 20px;
+            font-weight: 600;
+            }
+        }
+    }
+    .equiment{
+        .eq_txt{
+            position: absolute;
+            bottom: 30%;
+            right: 10%;
+        }
+    }
+   }
+   .pointer{
+    position: relative; 
+    cursor: pointer;
+    overflow: hidden;
+    
+    img{
+        width: 100%;
+        transition: 0.3s linear;
+    }
+    &:hover{
+        img{
+            transform: scale(1.1);
+        }
+    }
+   }
+}
