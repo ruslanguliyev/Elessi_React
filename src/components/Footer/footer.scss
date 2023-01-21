@@ -1,14 +1,15 @@
 @import '../../style/mixin.scss';
 
 .footer{
-    background-color: #FAFAFA;
     padding: 80px 0px;
     .footer_top{
         margin-bottom: 50px;
+        
         .footer_logo{
-            img{
-                width: 40%;
-            }
+            margin-top: -20px;
+            display: flex;
+            @include logo;
+            @include dot_color;
         }
         .footer_icons{
             display: flex;

@@ -1,0 +1,97 @@
+@import '../style/mixin.scss';
+
+.card_item{
+    position: relative;
+    overflow: hidden;
+    &:hover{
+        .card_icon{
+            #hover_icon{
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+    }
+    .img_case{
+        cursor: pointer;
+        overflow: hidden;
+        img{
+           
+            transition: .5s ease;
+        }
+        .product_pictures{
+            width: 300px;
+            height: 310px;
+            position: absolute;
+            left: 0%;
+            opacity: 0;
+            visibility: hidden;
+            @include maxResponsive(768px){
+                width: 250px;
+                height: 245px;
+            }
+            @include maxResponsive(598px){
+                width: 100%;
+                height: 77%;
+            }
+        }
+        .cover_photo{
+            width:100%;
+            height: 100%;
+        }
+        &:hover{
+           .product_pictures{
+            opacity: 1;
+            visibility: visible;
+           }
+           .cover_photo{
+            opacity: 0;
+            visibility: hidden;
+           } 
+        }
+    }
+    .card_icon{
+        i{
+            position: absolute;
+            right: 2%;
+            font-size: 25px;
+            cursor: pointer;
+            
+            padding: 8px;
+            &:nth-child(1){
+                top: 1%;
+            }
+            &:nth-child(2){
+                top: 15%;
+                background-color: #383838;
+                border-radius: 50px;
+                color: white;
+                transition: .2s ease;
+                opacity: 0;
+            }
+            &:nth-child(3){
+                top: 63%;
+                background-color: #95BF47;
+                border-radius: 50px;
+                color: white;
+                transition: .4s ease;
+                opacity: 0;
+            }
+        }
+        #hover_icon{
+            transform: translateX(50px); 
+        }
+    }
+    .card_info{
+        
+        h5{
+           font-size: 16px;
+        }
+        p{
+            
+            margin-top: -15px;
+            font-size: 20px;
+            font-weight: 600;
+        }
+    }
+
+}

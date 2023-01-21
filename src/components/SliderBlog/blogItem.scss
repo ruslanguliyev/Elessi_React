@@ -1,0 +1,58 @@
+@import '../../style/mixin.scss';
+
+.swiper{
+    position: relative;
+    
+    padding: 10px;
+    .blog_content{
+        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+        transition: .6s ease;
+        &:hover{
+            box-shadow: 0px 0px 5px 2px rgba(139,134,134,0.75);
+            .img_blog{
+                img{
+                    transform: scale(1.1);
+                }
+            }
+        }
+        .img_blog{
+            
+            transition: .5s ease;
+            overflow: hidden;
+            img{
+                transition: .5s ease;
+                width: 130%; 
+                
+                
+            }
+    
+        }
+        .blog_info{
+            
+            padding: 20px;
+            h5{
+                color: #bbb;
+                text-transform: uppercase;
+                letter-spacing: 3px;
+                transition: .3s ease;
+                margin: 0%;
+                padding: 0%;
+                &:hover{
+                    color: black;
+                }
+            }
+            h2{
+                transition: .3s ease;
+                &:hover{
+                    color: #83B828;
+                }
+                @include maxResponsive(768px){
+                    font-size: 15px;
+                }
+                @include maxResponsive(425px){
+                    font-size: 13x;
+                }
+            }
+        }
+    }
+}
